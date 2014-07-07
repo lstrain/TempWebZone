@@ -1,0 +1,80 @@
+Basic HTML layout
+
+
+
+<html>
+<head>
+<title></title>
+</head>
+<body>
+Hello world!
+</body>
+</html>
+
+
+
+
+row / dev / mysql_test / test.rb 
+
+
+
+
+require 'mysql2'
+
+client = Mysql2::Client.new(host: '', username: '', password: '')
+
+sql = 'select NOW() as timestamp'
+
+result = client.query(sql)
+
+result.each do |row|
+  puts row['timestamp']
+end
+
+
+
+
+
+
+
+
+ row / row.bat 
+
+
+set PATH=c:\windows\system32;c:\windows
+set PATH=%PATH%;c:\row\Ruby200\bin
+set PATH=%PATH%;C:\row\mysql-connector-c-noinstall-6.0.2-win32\lib
+
+start "Rails on Windows" /D c:\row
+
+
+
+
+Create README.md
+
+
++row
+
++===
+
++
+
++Rails on Windows instructions
+
+
+
+Create a new repository on the command line
+
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:lstrain/TempWebZone.git
+git push -u origin master
+
+
+
+Push an existing repository from the command line
+
+git remote add origin git@github.com:lstrain/TempWebZone.git
+git push -u origin master
